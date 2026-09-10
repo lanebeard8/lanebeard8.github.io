@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>玛雅 作品-玛雅作品合集介绍与观看阅读指南</title>
+<meta name="description" content="玛雅作品合集介绍页面，梳理玛雅相关作品的类型、主题、观看与阅读方式，帮助读者快速了解玛雅作品的整体面貌与选择方向。">
+<meta name="keywords" content="玛雅 作品,玛雅作品合集,玛雅作品介绍,玛雅作品推荐,玛雅创作">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  color: #2b2b2b;
+  background: #f5f2ec;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+.container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 顶部导航 */
+.site-header {
+  background: #1f1a16;
+  color: #f2e9dd;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.25);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 66px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.brand-mark {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #c98b3c, #8a5a22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff8ec;
+  letter-spacing: 1px;
+}
+.brand-text b {
+  font-size: 18px;
+  letter-spacing: 1px;
+  display: block;
+}
+.brand-text span {
+  font-size: 12px;
+  color: #b9a992;
+  letter-spacing: 2px;
+}
+.nav-links {
+  display: flex;
+  gap: 26px;
+  font-size: 15px;
+}
+.nav-links a {
+  color: #d9cdbc;
+  padding: 6px 0;
+  border-bottom: 2px solid transparent;
+  transition: color .2s, border-color .2s;
+}
+.nav-links a:hover {
+  color: #f3c98b;
+  border-bottom-color: #c98b3c;
+}
+
+/* 首屏 */
+.hero {
+  background: linear-gradient(160deg, #241d16 0%, #3a2c1e 55%, #4d3a26 100%);
+  color: #f5ecdf;
+  padding: 64px 0 58px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  right: -120px;
+  top: -120px;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,139,60,0.35), transparent 70%);
+}
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+}
+.hero-tag {
+  display: inline-block;
+  font-size: 13px;
+  letter-spacing: 3px;
+  color: #e2b877;
+  border: 1px solid rgba(226,184,119,0.5);
+  border-radius: 20px;
+  padding: 4px 16px;
+  margin-bottom: 22px;
+}
+.hero h1 {
+  font-size: 42px;
+  line-height: 1.3;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+.hero h1 em {
+  font-style: normal;
+  color: #f0c07f;
+}
+.hero p {
+  font-size: 16px;
+  color: #d6c8b4;
+  max-width: 640px;
+  margin-bottom: 30px;
+}
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 15px;
+  letter-spacing: 1px;
+  transition: transform .2s, box-shadow .2s, background .2s;
+}
+.btn-primary {
+  background: linear-gradient(135deg, #d69a4a, #a86e2a);
+  color: #fff9ef;
+  box-shadow: 0 6px 18px rgba(168,110,42,0.4);
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(168,110,42,0.5);
+}
+.btn-ghost {
+  border: 1px solid rgba(240,192,127,0.6);
+  color: #f0c07f;
+}
+.btn-ghost:hover {
+  background: rgba(240,192,127,0.12);
+}
+
+/* 通用区块 */
+.section {
+  padding: 62px 0;
+}
+.section-alt {
+  background: #efe9df;
+}
+.section-head {
+  margin-bottom: 38px;
+}
+.section-head .eyebrow {
+  font-size: 13px;
+  letter-spacing: 3px;
+  color: #a8763a;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.section-head h2 {
+  font-size: 27px;
+  color: #241d16;
+  letter-spacing: 1px;
+}
+.section-head p {
+  margin-top: 10px;
+  color: #6c6153;
+  font-size: 15px;
+  max-width: 760px;
+}
+
+/* 作品类型卡片 */
+.type-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 22px;
+}
+.type-card {
+  background: #fffdf9;
+  border: 1px solid #e6ddcd;
+  border-radius: 12px;
+  padding: 26px 24px;
+  transition: transform .25s, box-shadow .25s, border-color .25s;
+}
+.type-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(90,66,35,0.13);
+  border-color: #d3b98c;
+}
+.type-card .icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  background: #f6ecdb;
+  color: #a8763a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.type-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #2c241b;
+}
+.type-card p {
+  font-size: 14.5px;
+  color: #6c6153;
+}
+
+/* 精选作品列表 */
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+.work-item {
+  display: flex;
+  gap: 18px;
+  background: #fffdf9;
+  border: 1px solid #e6ddcd;
+  border-radius: 12px;
+  padding: 20px;
+  transition: box-shadow .25s, border-color .25s;
+}
+.work-item:hover {
+  box-shadow: 0 12px 26px rgba(90,66,35,0.12);
+  border-color: #d3b98c;
+}
+.work-thumb {
+  flex: 0 0 76px;
+  height: 100px;
+  border-radius: 8px;
+  background: linear-gradient(150deg, #3a2c1e, #6b4e2e);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f0c07f;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.work-body h3 {
+  font-size: 17px;
+  margin-bottom: 6px;
+  color: #2c241b;
+}
+.work-meta {
+  font-size: 12.5px;
+  color: #a8763a;
+  margin-bottom: 8px;
+  letter-spacing: .5px;
+}
+.work-body p {
+  font-size: 14px;
+  color: #6c6153;
+}
+
+/* 主题解析 */
+.theme-wrap {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+.theme-text h3 {
+  font-size: 19px;
+  margin: 22px 0 10px;
+  color: #2c241b;
+  padding-left: 12px;
+  border-left: 4px solid #c98b3c;
+}
+.theme-text h3:first-child {
+  margin-top: 0;
+}
+.theme-text p {
+  font-size: 15px;
+  color: #5c5245;
+  margin-bottom: 6px;
+}
+.theme-aside {
+  background: #241d16;
+  color: #e4d8c6;
+  border-radius: 14px;
+  padding: 28px 26px;
+}
+.theme-aside h3 {
+  font-size: 17px;
+  color: #f0c07f;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+.theme-aside ul {
+  list-style: none;
+}
+.theme-aside li {
+  font-size: 14.5px;
+  padding: 10px 0;
+  border-bottom: 1px dashed rgba(240,192,127,0.22);
+  color: #cdbfa9;
+}
+.theme-aside li:last-child {
+  border-bottom: none;
+}
+.theme-aside li b {
+  color: #f0c07f;
+  font-weight: 600;
+}
+
+/* 观看阅读指南步骤 */
+.guide-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+  counter-reset: step;
+}
+.step-card {
+  background: #fffdf9;
+  border: 1px solid #e6ddcd;
+  border-radius: 12px;
+  padding: 26px 22px;
+  position: relative;
+}
+.step-card::before {
+  counter-increment: step;
+  content: "0" counter(step);
+  font-size: 30px;
+  font-weight: 700;
+  color: #ecdcc2;
+  display: block;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+.step-card h3 {
+  font-size: 16.5px;
+  margin-bottom: 8px;
+  color: #2c241b;
+}
+.step-card p {
+  font-size: 14px;
+  color: #6c6153;
+}
+
+/* FAQ */
+.faq-list {
+  max-width: 880px;
+}
+.faq-item {
+  background: #fffdf9;
+  border: 1px solid #e6ddcd;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  overflow: hidden;
+}
+.faq-item summary {
+  cursor: pointer;
+  padding: 18px 22px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c241b;
+  list-style: none;
+  position: relative;
+  padding-right: 50px;
+}
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 22px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  color: #a8763a;
+  font-weight: 400;
+}
+.faq-item[open] summary::after {
+  content: "−";
+}
+.faq-item p {
+  padding: 0 22px 20px;
+  font-size: 14.5px;
+  color: #5c5245;
+}
+
+/* 页脚 */
+.site-footer {
+  background: #1f1a16;
+  color: #9c8f7d;
+  padding: 48px 0 26px;
+  font-size: 14px;
+}
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 36px;
+  padding-bottom: 34px;
+  border-bottom: 1px solid rgba(240,192,127,0.15);
+}
+.footer-brand b {
+  color: #f0c07f;
+  font-size: 17px;
+  display: block;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+.footer-brand p {
+  color: #8a7d6b;
+  font-size: 13.5px;
+  max-width: 340px;
+}
+.footer-col h4 {
+  color: #d9cdbc;
+  font-size: 14.5px;
+  margin-bottom: 14px;
+  letter-spacing: 1px;
+}
+.footer-col a {
+  display: block;
+  color: #8a7d6b;
+  font-size: 13.5px;
+  padding: 5px 0;
+  transition: color .2s;
+}
+.footer-col a:hover {
+  color: #f0c07f;
+}
+.footer-bottom {
+  padding-top: 22px;
+  text-align: center;
+  font-size: 12.5px;
+  color: #6d6252;
+  letter-spacing: .5px;
+}
+
+/* 响应式 */
+@media (max-width: 900px) {
+  .theme-wrap {
+    grid-template-columns: 1fr;
+  }
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 680px) {
+  .nav-links {
+    display: none;
+  }
+  .hero h1 {
+    font-size: 30px;
+  }
+  .hero {
+    padding: 46px 0 42px;
+  }
+  .section {
+    padding: 44px 0;
+  }
+  .section-head h2 {
+    font-size: 22px;
+  }
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+  .work-item {
+    flex-direction: column;
+  }
+  .work-thumb {
+    flex: none;
+    width: 100%;
+    height: 70px;
+  }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand">
+      <div class="brand-mark">玛</div>
+      <div class="brand-text">
+        <b>玛雅作品档案</b>
+        <span>WORKS ARCHIVE</span>
+      </div>
+    </div>
+    <nav class="nav-links">
+      <a href="#types">作品类型</a>
+      <a href="#works">精选作品</a>
+      <a href="#theme">主题解析</a>
+      <a href="#guide">观看指南</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <span class="hero-tag">玛雅 作品</span>
+      <h1>玛雅作品：从类型脉络到<em>选择方向</em>的完整梳理</h1>
+      <p>“玛雅 作品”是一个含义较宽泛的搜索词，可能指向不同创作者、不同领域的作品集合。本页面帮助读者先理清作品类型与判断维度，再结合自身兴趣选择适合的观看或阅读方向。</p>
+      <div class="hero-actions">
+        <a href="#types" class="btn btn-primary">了解作品类型</a>
+        <a href="#guide" class="btn btn-ghost">查看选择指南</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 作品类型 -->
+  <section class="section" id="types">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">作品类型</div>
+        <h2>玛雅作品可能涉及的几个方向</h2>
+        <p>由于“玛雅”既可能是创作者署名，也可能是作品主题或系列名称，搜索时先确认自己关注的是哪一类内容，能大幅提高查找效率。</p>
+      </div>
+      <div class="type-grid">
+        <div class="type-card">
+          <div class="icon">文</div>
+          <h3>文字与文学类</h3>
+          <p>包括小说、散文、随笔等以文字为主要载体的创作，适合喜欢细读与反复品味的读者。这类作品通常更依赖叙事节奏与语言质感。</p>
+        </div>
+        <div class="type-card">
+          <div class="icon">画</div>
+          <h3>绘画与漫画类</h3>
+          <p>以画面叙事为主，包含单幅插画、连载漫画等形式。阅读时重点关注分镜、色彩与画面信息量，与纯文字作品的体验差异明显。</p>
+        </div>
+        <div class="type-card">
+          <div class="icon">影</div>
+          <h3>影像与动画类</h3>
+          <p>涵盖短片、动画、影视化改编等。此类作品往往需要按系列或时间线观看，提前了解顺序有助于理解整体脉络。</p>
+        </div>
+        <div class="type-card">
+          <div class="icon">创</div>
+          <h3>综合创作与衍生</h3>
+          <p>部分作品会跨媒介延展，例如文字改编为漫画、影像配套设定集等。围绕同一主题的多形态作品，适合作为整体来了解。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 精选作品 -->
+  <section class="section section-alt" id="works">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">精选作品</div>
+        <h2>按题材整理的玛雅作品示例条目</h2>
+        <p>以下条目用于说明作品信息的组织方式，涵盖题材、形式与阅读重点。具体作品名称与内容请以实际来源为准，建议通过正规渠道核实。</p>
+      </div>
+      <div class="work-list">
+        <article class="work-item">
+          <div class="work-thumb">叙</div>
+          <div class="work-body">
+            <h3>叙事向长篇作品</h3>
+            <div class="work-meta">文字 · 长篇 · 世界观构建</div>
+            <p>以完整世界观和人物成长为主线，适合按顺序通读。阅读时留意伏笔的埋设与回收，是理解作品结构的关键。</p>
+          </div>
+        </article>
+        <article class="work-item">
+          <div class="work-thumb">短</div>
+          <div class="work-body">
+            <h3>短篇与单元作品</h3>
+            <div class="work-meta">文字 / 漫画 · 短篇 · 主题集中</div>
+            <p>篇幅较短、主题集中，适合碎片时间阅读。每篇相对独立，可自由挑选顺序，适合作为接触该创作风格的入门。</p>
+          </div>
+        </article>
+        <article class="work-item">
+          <div class="work-thumb">画</div>
+          <div class="work-body">
+            <h3>画面主导型作品</h3>
+            <div class="work-meta">漫画 / 插画 · 视觉叙事</div>
+            <p>以画面传递情绪与信息，文字占比相对较低。阅读时建议放慢速度，关注构图与色调变化带来的情绪引导。</p>
+          </div>
+        </article>
+        <article class="work-item">
+          <div class="work-thumb">系</div>
+          <div class="work-body">
+            <h3>系列化与合集类</h3>
+            <div class="work-meta">多形态 · 系列 · 时间线相关</div>
+            <p>由多部作品共同构成，存在时间线或设定上的关联。建议先确认推荐顺序，再决定是顺序观看还是按兴趣挑选。</p>
+          </div>
+        </article>
+        <article class="work-item">
+          <div class="work-thumb">题</div>
+          <div class="work-body">
+            <h3>主题创作与专题作品</h3>
+            <div class="work-meta">专题 · 文化主题 · 背景知识</div>
+            <p>围绕特定主题展开，可能涉及历史、文化或地域背景。提前补充少量背景知识，往往能显著提升理解深度。</p>
+          </div>
+        </article>
+        <article class="work-item">
+          <div class="work-thumb">改</div>
+          <div class="work-body">
+            <h3>改编与衍生作品</h3>
+            <div class="work-meta">跨媒介 · 改编 · 对照阅读</div>
+            <p>由原作延展而来，与原作存在差异。对照阅读有助于观察不同媒介在表达同一内容时的取舍与侧重。</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 主题解析 -->
+  <section class="section" id="theme">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">主题解析</div>
+        <h2>如何理解玛雅作品的内容与风格</h2>
+        <p>面对信息有限的搜索词，与其记住零散条目，不如掌握几个稳定的判断维度，这样在遇到新作品时也能快速定位。</p>
+      </div>
+      <div class="theme-wrap">
+        <div class="theme-text">
+          <h3>先看作品形式，再看内容题材</h3>
+          <p>形式决定了体验方式：文字作品依赖想象与语言节奏，漫画依赖画面与分镜，影像依赖镜头与声音。先锁定形式，能避免在不适合的载体上浪费时间。</p>
+          <h3>关注叙事结构与时间线</h3>
+          <p>系列化作品常见多线并进或非线性叙事。了解大致的时间线安排，有助于在阅读过程中保持对人物关系与事件因果的清晰判断。</p>
+          <h3>留意主题与背景设定</h3>
+          <p>部分作品带有明显的文化或历史背景。这类内容通常需要一定的背景知识铺垫，理解门槛略高，但收获也相对更丰富。</p>
+          <h3>结合自身偏好做取舍</h3>
+          <p>同一创作者的不同作品之间，风格与难度也可能存在差异。建议从篇幅较短、主题集中的作品入手，再逐步扩展到长篇与系列。</p>
+        </div>
+        <aside class="theme-aside">
+          <h3>快速判断清单</h3>
+          <ul>
+            <li><b>形式：</b>文字、漫画还是影像，决定你的阅读方式</li>
+            <li><b>篇幅：</b>短篇适合入门，长篇适合沉浸式阅读</li>
+            <li><b>顺序：</b>系列作品先确认推荐观看或阅读顺序</li>
+            <li><b>背景：</b>涉及文化主题时，先补充基础背景知识</li>
+            <li><b>渠道：</b>优先选择正规、可核实的来源获取内容</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 观看阅读指南 -->
+  <section class="section section-alt" id="guide">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">观看阅读指南</div>
+        <h2>从零开始了解玛雅作品的四个步骤</h2>
+        <p>不需要一次性掌握全部信息，按下面的顺序推进，可以更高效地建立起对作品整体的认知。</p>
+      </div>
+      <div class="guide-steps">
+        <div class="step-card">
+          <h3>确认关键词指向</h3>
+          <p>先明确自己搜索的“玛雅”是创作者名、系列名还是主题词，不同指向对应的作品范围差别很大。</p>
+        </div>
+        <div class="step-card">
+          <h3>筛选作品形式</h3>
+          <p>根据自己偏好的阅读或观看方式，在文字、漫画、影像等类别中做初步筛选，缩小范围。</p>
+        </div>
+        <div class="step-card">
+          <h3>从短篇或单部入手</h3>
+          <p>先接触篇幅较短、主题集中的作品，判断风格是否合口味，再决定是否深入长篇与系列。</p>
+        </div>
+        <div class="step-card">
+          <h3>补充背景与顺序</h3>
+          <p>进入系列作品前，了解时间线、设定背景与推荐顺序，能明显减少理解上的障碍。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">常见问题</div>
+        <h2>关于玛雅作品的常见疑问</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>“玛雅 作品”通常指什么？</summary>
+          <p>这个关键词本身含义较宽，可能指向某位以“玛雅”为名的创作者的作品，也可能指以玛雅文化、玛雅文明为主题的相关创作。建议结合你看到的具体来源，判断属于哪一种情况。</p>
+        </details>
+        <details class="faq-item">
+          <summary>应该先看或先读哪一部？</summary>
+          <p>如果作品之间存在系列关系，通常建议按官方或来源标注的推荐顺序进行。若没有明确顺序，可以从篇幅较短、主题集中的作品开始，便于快速判断风格是否适合自己。</p>
+        </details>
+        <details class="faq-item">
+          <summary>不同形式的作品体验差别大吗？</summary>
+          <p>差别比较明显。文字作品更依赖读者的想象补全，漫画强调画面与分镜的节奏，影像则通过镜头和声音直接传递信息。同一主题在不同形式下，侧重点往往不同。</p>
+        </details>
+        <details class="faq-item">
+          <summary>涉及文化背景的作品需要提前了解什么？</summary>
+          <p>如果作品与特定历史或文化主题相关，提前了解基本的时间范围、地理背景和常见概念会有所帮助。不需要系统学习，掌握基础脉络即可明显提升理解体验。</p>
+        </details>
+        <details class="faq-item">
+          <summary>如何判断作品信息是否可靠？</summary>
+          <p>优先参考来源明确、可核实的渠道，对来源不明、表述夸张或缺乏依据的信息保持谨慎。涉及具体名称、版本和顺序时，建议交叉比对多个来源。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <b>玛雅作品档案</b>
+        <p>围绕“玛雅 作品”这一关键词，整理作品类型、主题脉络与选择思路，帮助读者更高效地找到适合自己的内容方向。</p>
+      </div>
+      <div class="footer-col">
+        <h4>内容导航</h4>
+        <a href="#types">作品类型</a>
+        <a href="#works">精选作品</a>
+        <a href="#theme">主题解析</a>
+        <a href="#guide">观看指南</a>
+      </div>
+      <div class="footer-col">
+        <h4>阅读提示</h4>
+        <a href="#faq">常见问题</a>
+        <a href="#guide">入门步骤</a>
+        <a href="#theme">判断清单</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 玛雅作品档案 · 内容仅作信息整理与阅读参考，具体作品信息请以正规来源为准
+    </div>
+  </div>
+</footer>
+
+</body>
+  </html>
