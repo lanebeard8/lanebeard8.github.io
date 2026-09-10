@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>scp游戏-收容题材游戏推荐与玩法入门指南</title>
+<meta name="description" content="scp游戏专题：介绍SCP题材游戏的类型、代表作品、玩法机制、新手入门建议与常见问题，帮助玩家快速了解收容类游戏世界。">
+<meta name="keywords" content="scp游戏,SCP收容游戏,SCP题材游戏,恐怖游戏,scp游戏推荐">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0b0d10;
+  --bg2:#12161b;
+  --panel:#171c22;
+  --line:#242b34;
+  --txt:#d8dee6;
+  --dim:#8b95a3;
+  --green:#4bd97c;
+  --amber:#e8b23c;
+  --red:#e05a5a;
+}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--txt);
+  font-family:"Segoe UI","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  line-height:1.7;
+  font-size:15px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* ---------- header ---------- */
+header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(11,13,16,.92);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.topbar{
+  display:flex;align-items:center;justify-content:space-between;
+  height:62px;gap:18px;
+}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:18px;letter-spacing:.5px}
+.logo .mark{
+  width:30px;height:30px;border:2px solid var(--green);border-radius:50%;
+  display:grid;place-items:center;font-size:13px;color:var(--green);
+  box-shadow:0 0 12px rgba(75,217,124,.35);
+}
+.logo span.sub{font-size:11px;color:var(--dim);font-weight:400;letter-spacing:1px}
+nav.mainnav{display:flex;gap:22px;font-size:14px}
+nav.mainnav a{color:var(--dim);padding:4px 0;border-bottom:2px solid transparent;transition:.2s}
+nav.mainnav a:hover{color:var(--green);border-bottom-color:var(--green)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--txt);padding:6px 10px;border-radius:6px;cursor:pointer;font-size:14px}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;
+  padding:64px 0 56px;
+  background:
+    radial-gradient(circle at 12% 18%,rgba(75,217,124,.10),transparent 42%),
+    radial-gradient(circle at 88% 8%,rgba(224,90,90,.10),transparent 45%),
+    linear-gradient(180deg,#0b0d10,#101419);
+  border-bottom:1px solid var(--line);
+  overflow:hidden;
+}
+.hero::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px);
+  background-size:100% 34px;opacity:.6;
+}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.35fr .9fr;gap:44px;align-items:center}
+.tagline{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12px;letter-spacing:1.5px;color:var(--green);
+  border:1px solid rgba(75,217,124,.35);border-radius:999px;
+  padding:4px 12px;margin-bottom:20px;background:rgba(75,217,124,.06);
+}
+.hero h1{font-size:40px;line-height:1.25;letter-spacing:.5px;margin-bottom:18px}
+.hero h1 em{font-style:normal;color:var(--green)}
+.hero p.lead{color:var(--dim);font-size:16px;max-width:620px;margin-bottom:26px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn{
+  display:inline-block;padding:11px 22px;border-radius:8px;font-size:14px;
+  border:1px solid var(--line);transition:.2s;cursor:pointer;
+}
+.btn.primary{background:var(--green);color:#08130c;font-weight:600;border-color:var(--green)}
+.btn.primary:hover{background:#63e88f}
+.btn.ghost:hover{border-color:var(--green);color:var(--green)}
+
+.hero-panel{
+  background:var(--panel);border:1px solid var(--line);border-radius:14px;
+  padding:22px;box-shadow:0 18px 40px rgba(0,0,0,.45);
+}
+.hero-panel h3{font-size:14px;color:var(--dim);font-weight:500;letter-spacing:1px;margin-bottom:14px}
+.hero-panel ul{list-style:none;display:flex;flex-direction:column;gap:12px}
+.hero-panel li{display:flex;gap:12px;align-items:flex-start;font-size:14px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--green);margin-top:7px;flex:none;box-shadow:0 0 8px rgba(75,217,124,.6)}
+.dot.amber{background:var(--amber);box-shadow:0 0 8px rgba(232,178,60,.6)}
+.dot.red{background:var(--red);box-shadow:0 0 8px rgba(224,90,90,.6)}
+.hero-panel li span.k{color:var(--txt)}
+.hero-panel li span.v{display:block;color:var(--dim);font-size:13px}
+
+/* ---------- section base ---------- */
+section{padding:56px 0}
+.sec-head{margin-bottom:30px}
+.sec-head .eyebrow{font-size:12px;letter-spacing:2px;color:var(--green);text-transform:uppercase}
+.sec-head h2{font-size:26px;margin:8px 0 10px;letter-spacing:.4px}
+.sec-head p{color:var(--dim);max-width:760px}
+
+/* ---------- 分类 ---------- */
+.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cat-card{
+  background:var(--bg2);border:1px solid var(--line);border-radius:12px;
+  padding:22px;transition:.25s;
+}
+.cat-card:hover{transform:translateY(-3px);border-color:rgba(75,217,124,.45)}
+.cat-card .ico{
+  width:38px;height:38px;border-radius:9px;display:grid;place-items:center;
+  background:rgba(75,217,124,.1);color:var(--green);font-size:17px;margin-bottom:14px;
+  border:1px solid rgba(75,217,124,.25);
+}
+.cat-card h3{font-size:17px;margin-bottom:8px}
+.cat-card p{color:var(--dim);font-size:14px}
+.cat-card .meta{margin-top:14px;font-size:12px;color:#6b7482;letter-spacing:.5px}
+
+/* ---------- 玩法/机制 ---------- */
+.mech{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.mech-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.mech-item{
+  display:flex;gap:16px;padding:20px;border:1px solid var(--line);
+  border-radius:12px;background:var(--panel);
+}
+.mech-item .num{
+  font-size:24px;font-weight:700;color:var(--green);opacity:.85;
+  min-width:42px;font-variant-numeric:tabular-nums;
+}
+.mech-item h3{font-size:16px;margin-bottom:6px}
+.mech-item p{color:var(--dim);font-size:14px}
+
+/* ---------- 作品列表 ---------- */
+.work-list{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.work{
+  background:var(--bg2);border:1px solid var(--line);border-radius:12px;
+  padding:22px;position:relative;overflow:hidden;
+}
+.work::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--green);
+}
+.work.w2::before{background:var(--amber)}
+.work.w3::before{background:var(--red)}
+.work.w4::before{background:#5a8fe0}
+.work h3{font-size:17px;margin-bottom:8px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.badge{
+  font-size:11px;padding:2px 9px;border-radius:999px;font-weight:500;
+  background:rgba(75,217,124,.12);color:var(--green);border:1px solid rgba(75,217,124,.3);
+}
+.badge.amber{background:rgba(232,178,60,.12);color:var(--amber);border-color:rgba(232,178,60,.3)}
+.badge.red{background:rgba(224,90,90,.12);color:var(--red);border-color:rgba(224,90,90,.3)}
+.badge.blue{background:rgba(90,143,224,.12);color:#7fb0f0;border-color:rgba(90,143,224,.3)}
+.work p{color:var(--dim);font-size:14px}
+.work .tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+.tag{font-size:12px;color:#7d8794;border:1px solid var(--line);border-radius:5px;padding:2px 8px}
+
+/* ---------- 入门指南 ---------- */
+.guide{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.guide-steps{list-style:none;counter-reset:step;display:flex;flex-direction:column;gap:16px}
+.guide-steps li{
+  counter-increment:step;position:relative;padding-left:52px;
+  background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:18px 20px 18px 62px;
+}
+.guide-steps li::before{
+  content:counter(step);position:absolute;left:18px;top:18px;
+  width:28px;height:28px;border-radius:50%;display:grid;place-items:center;
+  background:rgba(75,217,124,.12);color:var(--green);font-size:13px;font-weight:700;
+  border:1px solid rgba(75,217,124,.32);
+}
+.guide-steps li h3{font-size:15px;margin-bottom:5px}
+.guide-steps li p{color:var(--dim);font-size:14px}
+.notice{
+  background:linear-gradient(180deg,rgba(232,178,60,.08),rgba(232,178,60,.02));
+  border:1px solid rgba(232,178,60,.3);border-radius:12px;padding:22px;
+}
+.notice h3{color:var(--amber);font-size:16px;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.notice ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.notice li{font-size:14px;color:var(--dim);padding-left:16px;position:relative}
+.notice li::before{content:"—";position:absolute;left:0;color:var(--amber)}
+
+/* ---------- FAQ ---------- */
+.faq{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.faq-list{display:flex;flex-direction:column;gap:12px;max-width:900px}
+details{
+  background:var(--panel);border:1px solid var(--line);border-radius:10px;
+  padding:16px 20px;transition:.2s;
+}
+details[open]{border-color:rgba(75,217,124,.4)}
+summary{
+  cursor:pointer;font-size:15px;font-weight:600;list-style:none;
+  display:flex;justify-content:space-between;align-items:center;gap:12px;
+}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--green);font-size:18px;font-weight:400;transition:.2s}
+details[open] summary::after{content:"–"}
+details p{color:var(--dim);font-size:14px;margin-top:12px;padding-top:12px;border-top:1px dashed var(--line)}
+
+/* ---------- footer ---------- */
+footer{padding:44px 0 30px;background:#080a0c;border-top:1px solid var(--line)}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:30px;margin-bottom:30px}
+.foot-grid h4{font-size:14px;margin-bottom:14px;color:var(--txt);letter-spacing:.5px}
+.foot-grid p,.foot-grid li{font-size:13px;color:var(--dim);line-height:2}
+.foot-grid ul{list-style:none}
+.foot-grid a:hover{color:var(--green)}
+.foot-bottom{
+  border-top:1px solid var(--line);padding-top:20px;
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
+  font-size:12px;color:#5d6672;
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:960px){
+  .hero-inner{grid-template-columns:1fr;gap:32px}
+  .hero h1{font-size:32px}
+  .cat-grid{grid-template-columns:repeat(2,1fr)}
+  .mech-grid{grid-template-columns:1fr}
+  .work-list{grid-template-columns:1fr}
+  .guide{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  nav.mainnav{
+    display:none;position:absolute;top:62px;left:0;right:0;
+    flex-direction:column;gap:0;background:#0d1014;
+    border-bottom:1px solid var(--line);padding:8px 20px 16px;
+  }
+  nav.mainnav.open{display:flex}
+  nav.mainnav a{padding:11px 0;border-bottom:1px solid var(--line);border-left:none}
+  .menu-btn{display:block}
+  .hero{padding:44px 0 40px}
+  .hero h1{font-size:26px}
+  .cat-grid{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+  section{padding:40px 0}
+  .sec-head h2{font-size:21px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap topbar">
+    <div class="logo">
+      <div class="mark">S</div>
+      <div>SCP游戏<span class="sub">收容题材游戏专题</span></div>
+    </div>
+    <nav class="mainnav" id="mainnav">
+      <a href="#types">游戏类型</a>
+      <a href="#mechanics">核心玩法</a>
+      <a href="#works">代表作品</a>
+      <a href="#guide">新手入门</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="展开导航">菜单</button>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div>
+        <div class="tagline">SCP FOUNDATION · 收容 · 探索 · 生存</div>
+        <h1>走进 <em>SCP游戏</em> 的世界：从收容失效到生存逃脱</h1>
+        <p class="lead">SCP游戏泛指以“SCP基金会”虚构世界观为背景的电子游戏。它们通常围绕异常实体的收容、探索与逃生展开，融合恐怖、解谜、生存与射击等元素。本专题帮你理清这类游戏的类型划分、常见机制与上手路径。</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#types">了解游戏类型</a>
+          <a class="btn ghost" href="#guide">新手入门建议</a>
+        </div>
+      </div>
+      <aside class="hero-panel">
+        <h3>快速导航 · 关键词速览</h3>
+        <ul>
+          <li><span class="dot"></span><span><span class="k">收容失效</span><span class="v">最广为人知的SCP游戏起源设定</span></span></li>
+          <li><span class="dot amber"></span><span><span class="k">多人合作</span><span class="v">与队友分工探索、对抗异常</span></span></li>
+          <li><span class="dot red"></span><span><span class="k">恐怖氛围</span><span class="v">依赖音效、黑暗与未知制造紧张感</span></span></li>
+          <li><span class="dot"></span><span><span class="k">世界观设定</span><span class="v">来自SCP基金会协作写作社区</span></span></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 游戏类型 -->
+  <section id="types">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Categories</div>
+        <h2>SCP游戏的主要类型划分</h2>
+        <p>同样打着“SCP”标签的作品，玩起来可能完全不同。按玩法结构大致可分为以下几类，方便你按自己的口味挑选。</p>
+      </div>
+      <div class="cat-grid">
+        <article class="cat-card">
+          <div class="ico">⌗</div>
+          <h3>第一人称恐怖逃生</h3>
+          <p>以黑暗走廊、随机异常和追逐战为核心，强调紧张感与资源稀缺。玩家通常手无寸铁，只能依靠观察、躲避与路线记忆求生。</p>
+          <div class="meta">关键词：潜行 · 追逐 · 氛围</div>
+        </article>
+        <article class="cat-card">
+          <div class="ico">⛨</div>
+          <h3>多人合作对抗</h3>
+          <p>玩家分为不同阵营，例如基金会人员、D级人员或异常实体，在同一张地图中完成各自目标，强调沟通与团队分工。</p>
+          <div class="meta">关键词：联机 · 阵营 · 博弈</div>
+        </article>
+        <article class="cat-card">
+          <div class="ico">✦</div>
+          <h3>收容模拟与管理</h3>
+          <p>把视角放在设施运营层面，需要安排人员、规划区域、应对突发事件，玩法更接近策略与资源管理。</p>
+          <div class="meta">关键词：经营 · 策略 · 调度</div>
+        </article>
+        <article class="cat-card">
+          <div class="ico">◈</div>
+          <h3>解谜与叙事探索</h3>
+          <p>弱化战斗，侧重文档阅读、线索拼合与剧情推进，适合喜欢世界观设定和推理体验的玩家。</p>
+          <div class="meta">关键词：剧情 · 推理 · 档案</div>
+        </article>
+        <article class="cat-card">
+          <div class="ico">⌁</div>
+          <h3>沙盒与模组创作</h3>
+          <p>提供地图编辑或模组支持，玩家社区可以自行添加异常实体、房间布局与规则，内容更新依赖社区活跃度。</p>
+          <div class="meta">关键词：模组 · 创意 · 社区</div>
+        </article>
+        <article class="cat-card">
+          <div class="ico">☰</div>
+          <h3>文字与轻量互动</h3>
+          <p>以文字描述、选项分支或简易界面呈现收容过程，门槛低、节奏慢，适合碎片时间体验设定。</p>
+          <div class="meta">关键词：文字 · 分支 · 轻量</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 核心玩法 -->
+  <section class="mech" id="mechanics">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Mechanics</div>
+        <h2>这类游戏反复出现的核心机制</h2>
+        <p>不同作品差异很大，但以下机制几乎是SCP题材游戏的共同语言，理解它们有助于快速上手。</p>
+      </div>
+      <div class="mech-grid">
+        <div class="mech-item">
+          <div class="num">01</div>
+          <div>
+            <h3>信息不对称</h3>
+            <p>玩家往往不清楚异常实体的规则，需要通过观察、试错或阅读游戏内文档逐步推断，错误判断会直接带来失败。</p>
+          </div>
+        </div>
+        <div class="mech-item">
+          <div class="num">02</div>
+          <div>
+            <h3>资源与视野限制</h3>
+            <p>手电电量、钥匙卡等级、医疗物资等通常是有限的，黑暗中视野受限，迫使玩家在探索与保守之间做取舍。</p>
+          </div>
+        </div>
+        <div class="mech-item">
+          <div class="num">03</div>
+          <div>
+            <h3>区域推进结构</h3>
+            <p>地图常按设施分区设计，例如轻收容区、重收容区、办公区等，玩家需要逐步解锁权限才能深入。</p>
+          </div>
+        </div>
+        <div class="mech-item">
+          <div class="num">04</div>
+          <div>
+            <h3>随机化与重玩性</h3>
+            <p>房间布局、异常出现位置或事件顺序随机生成，让每一次开局都有不同走向，也提高了长期可玩性。</p>
+          </div>
+        </div>
+        <div class="mech-item">
+          <div class="num">05</div>
+          <div>
+            <h3>阵营与目标冲突</h3>
+            <p>多人模式中，各方目标并不一致，合作与背叛同时存在，社交博弈成为玩法的重要组成部分。</p>
+          </div>
+        </div>
+        <div class="mech-item">
+          <div class="num">06</div>
+          <div>
+            <h3>档案式叙事</h3>
+            <p>通过终端记录、便签、录音等碎片信息补全世界观，玩家在探索中自行拼凑事件的前因后果。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 代表作品 -->
+  <section id="works">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Notable Works</div>
+        <h2>值得了解的SCP题材作品方向</h2>
+        <p>下面按玩法方向列举几类具有代表性的作品形态，帮助你建立整体印象。具体版本、平台与更新状态请以官方发布渠道为准。</p>
+      </div>
+      <div class="work-list">
+        <article class="work">
+          <h3>收容失效类起源作品 <span class="badge">单机 · 恐怖</span></h3>
+          <p>以设施内突发收容失效为起点，玩家在无武器或弱武装状态下寻找出路。它奠定了后来大量同类作品的基本框架：黑暗走廊、随机异常、钥匙卡权限与逃生路线。</p>
+          <div class="tags"><span class="tag">第一人称</span><span class="tag">追逐</span><span class="tag">经典</span></div>
+        </article>
+        <article class="work w2">
+          <h3>多人对抗类作品 <span class="badge amber">联机 · 阵营</span></h3>
+          <p>把玩家分成基金会守卫、D级人员与异常实体等阵营，围绕撤离、收容或逃脱展开对抗。节奏更快，强调语音沟通与临场判断。</p>
+          <div class="tags"><span class="tag">多人</span><span class="tag">阵营</span><span class="tag">博弈</span></div>
+        </article>
+        <article class="work w3">
+          <h3>生存建造类作品 <span class="badge red">生存 · 建造</span></h3>
+          <p>把收容与生存结合，玩家需要收集物资、搭建据点并对抗异常威胁。循环更长，单局时间通常明显高于纯逃生类作品。</p>
+          <div class="tags"><span class="tag">生存</span><span class="tag">建造</span><span class="tag">长期</span></div>
+        </article>
+        <article class="work w4">
+          <h3>社区模组与衍生玩法 <span class="badge blue">模组 · 社区</span></h3>
+          <p>依托玩家社区持续产出地图、实体与规则模组，内容体量往往超过本体。质量参差，挑选时建议查看更新记录与玩家反馈。</p>
+          <div class="tags"><span class="tag">模组</span><span class="tag">创意工坊</span><span class="tag">扩展</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 入门指南 -->
+  <section id="guide">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Getting Started</div>
+        <h2>新手入门路径与注意事项</h2>
+        <p>如果你是第一次接触SCP游戏，按下面的顺序了解，会比直接冲进游戏少走很多弯路。</p>
+      </div>
+      <div class="guide">
+        <ol class="guide-steps">
+          <li>
+            <h3>先了解世界观背景</h3>
+            <p>SCP基金会是一个虚构的协作写作设定，核心概念是“收容异常”。了解这一前提，游戏中的术语、编号与机构关系就不再陌生。</p>
+          </li>
+          <li>
+            <h3>按偏好选择类型</h3>
+            <p>喜欢紧张感选恐怖逃生，喜欢社交选多人对抗，喜欢慢节奏选模拟经营或文字互动。先明确自己想获得什么体验。</p>
+          </li>
+          <li>
+            <h3>从单机作品上手</h3>
+            <p>单机作品节奏可控，失败成本低，适合熟悉操作、地图结构与常见异常行为，再过渡到联机模式。</p>
+          </li>
+          <li>
+            <h3>熟悉基础操作与地图</h3>
+            <p>优先记住交互键、奔跑与体力机制、钥匙卡等级含义，以及常见区域的连接方式，这些直接影响存活率。</p>
+          </li>
+          <li>
+            <h3>阅读游戏内文档</h3>
+            <p>终端记录与档案往往包含应对异常的关键线索，跳过它们容易在关键时刻做出错误判断。</p>
+          </li>
+          <li>
+            <h3>联机时保持沟通</h3>
+            <p>多人模式中及时报点、共享物资、明确分工，比个人技术更能决定一局的结果。</p>
+          </li>
+        </ol>
+        <aside class="notice">
+          <h3>⚠ 体验前的几点提醒</h3>
+          <ul>
+            <li>部分作品包含突然惊吓、黑暗场景与紧张音效，对恐怖内容敏感的玩家建议先观看无解说演示。</li>
+            <li>联机作品的玩家群体与规则差异较大，进入服务器前先阅读其说明与约定。</li>
+            <li>模组内容来源多样，安装前留意文件出处与社区评价，避免引入不稳定或来源不明的文件。</li>
+            <li>作品版本与运营状态会随时间变化，购买或下载前请以官方渠道的最新信息为准。</li>
+            <li>合理安排游戏时间，恐怖类作品在深夜长时间游玩容易造成疲劳与不适。</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">FAQ</div>
+        <h2>关于SCP游戏的常见问题</h2>
+        <p>下面整理了几个初次接触这类题材时最常被问到的问题。</p>
+      </div>
+      <div class="faq-list">
+        <details open>
+          <summary>SCP游戏是同一个系列吗？</summary>
+          <p>不是。SCP基金会本身是一个开放的虚构设定，不同开发者基于它各自创作游戏，玩法、画面和运营方式都可能完全不同，彼此之间通常没有统一的系列关系。</p>
+        </details>
+        <details>
+          <summary>没看过SCP相关设定，能直接玩吗？</summary>
+          <p>可以。多数作品会在游戏内通过文档、对话或环境细节交代必要背景，不影响基本操作。不过提前了解“收容”“异常实体”“D级人员”等基础概念，会更容易理解剧情走向。</p>
+        </details>
+        <details>
+          <summary>这类游戏都很恐怖吗？</summary>
+          <p>不一定。恐怖逃生只是其中一大类，还有模拟经营、解谜叙事、多人对抗等方向。同一题材下，氛围强度差异很大，可以按自己的接受度选择。</p>
+        </details>
+        <details>
+          <summary>多人模式和单机模式有什么区别？</summary>
+          <p>单机更注重氛围、探索与个人决策；多人则加入阵营目标、信息交流与临场博弈，节奏更快，也更依赖队友配合。两者体验侧重不同，可以都尝试后再决定偏好。</p>
+        </details>
+        <details>
+          <summary>模组内容值得尝试吗？</summary>
+          <p>模组能显著扩展可玩内容，尤其是地图与异常实体方面。但质量参差不齐，建议优先选择更新频繁、反馈良好的模组，并在安装前确认来源可靠。</p>
+        </details>
+        <details>
+          <summary>如何判断一款SCP游戏是否适合自己？</summary>
+          <p>可以先看玩法标签、单局时长和是否支持联机，再结合无解说实机演示判断氛围强度。若对恐怖内容敏感，优先考虑解谜、经营或轻量互动方向。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>SCP游戏专题</h4>
+        <p>围绕收容题材游戏整理类型划分、玩法机制与入门建议，帮助玩家更高效地了解这一题材的多样面貌。</p>
+      </div>
+      <div>
+        <h4>内容导航</h4>
+        <ul>
+          <li><a href="#types">游戏类型</a></li>
+          <li><a href="#mechanics">核心玩法</a></li>
+          <li><a href="#works">代表作品</a></li>
+          <li><a href="#guide">新手入门</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>相关概念</h4>
+        <ul>
+          <li><a href="#faq">收容失效</a></li>
+          <li><a href="#faq">异常实体</a></li>
+          <li><a href="#mechanics">阵营对抗</a></li>
+          <li><a href="#guide">模组扩展</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>阅读提示</h4>
+        <ul>
+          <li>信息以设定与玩法介绍为主</li>
+          <li>版本与平台请以官方为准</li>
+          <li>理性安排游戏时间</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>SCP游戏 · 收容题材游戏内容专题</span>
+      <span>本站内容为题材科普与整理，与任何具体作品官方无隶属关系</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn = document.getElementById('menuBtn');
+  var nav = document.getElementById('mainnav');
+  if(btn && nav){
+    btn.addEventListener('click', function(){
+      nav.classList.toggle('open');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){ nav.classList.remove('open'); }
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
